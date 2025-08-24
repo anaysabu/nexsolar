@@ -5,6 +5,7 @@
   <title>Nexolar Innovation - Demo Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html { scroll-padding-top: 80px; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -38,7 +39,7 @@
     nav a:hover { color: #f5d76e; }
     .hero {
       height: 100vh;
-      background: url('67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg') no-repeat center center/cover;
+      background: url('images/67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg') no-repeat center center/cover;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -101,7 +102,7 @@
       padding: 5px 15px;
       font-size: 0.9rem;
       z-index: 20;
-      transform: rotate(10deg);
+      transform: rotate(5deg);
       font-weight: bold;
     }
   </style>
@@ -160,7 +161,7 @@
         setTimeout(typeWriter, speed);
       }
     }
-    window.onload = typeWriter;
+    window.addEventListener('DOMContentLoaded', typeWriter);
 
     // Scroll fade-in
     const sections = document.querySelectorAll("section");
