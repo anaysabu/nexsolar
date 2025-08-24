@@ -3,223 +3,65 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SunSpark Solar — Clean Energy Made Simple</title>
-  <meta name="description" content="Affordable residential & commercial solar installations. Save money, save the planet." />
+  <title>Nexolar Innovation — Complete Solar Solutions</title>
   <style>
-    :root{
-      --bg:#0b1320;
-      --card:#101a2e;
-      --text:#e7eefc;
-      --muted:#9fb3d9;
-      --brand:#ffd25a;
-      --accent:#2ed573;
-      --border: #1e2a44;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0f1b31);color:var(--text);}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1140px;margin:0 auto;padding:0 1.2rem}
-    /* Header */
-    header{position:sticky;top:0;z-index:50;background:rgba(11,19,32,.6);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
-    .brand{display:flex;gap:.6rem;align-items:center;font-weight:700;letter-spacing:.3px}
-    .brand .logo{width:28px;height:28px;display:grid;place-items:center;background:radial-gradient(circle, var(--brand), #ffae00);border-radius:50%;box-shadow:0 0 20px #ffb70355}
-    .brand span{font-size:1.05rem}
-    .menu{display:flex;gap:1.2rem}
-    .menu a{color:var(--muted)}
-    .menu a:hover{color:var(--text)}
-    .cta{background:var(--brand);color:#1a1a1a;border:0;padding:.6rem .9rem;border-radius:999px;font-weight:700}
-    .cta:hover{filter:brightness(1.05)}
-    /* Hero */
-    .hero{padding:4.5rem 0 3rem;border-bottom:1px solid var(--border);
-      background:
-        radial-gradient(1000px 400px at 20% -20%, #1d2a4a 10%, transparent 70%),
-        radial-gradient(900px 400px at 100% 0%, #1b2c50 10%, transparent 60%);
-    }
-    .hero h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:.4rem 0}
-    .hero p{color:var(--muted);max-width:52ch}
-    .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
-    .btn{display:inline-flex;align-items:center;gap:.5rem;border:1px solid var(--border);padding:.65rem 1rem;border-radius:12px}
-    .btn:hover{border-color:#2b3d68}
-    .btn.primary{background:var(--brand);color:#141414;border-color:transparent;font-weight:700}
-    /* Sections */
-    section{padding:3rem 0;border-bottom:1px solid var(--border)}
-    h2{font-size:1.6rem;margin:0 0 .8rem}
-    .muted{color:var(--muted)}
-    /* Grid cards */
-    .grid{display:grid;gap:1rem}
-    @media (min-width:700px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:16px}
-    .card h3{margin:.2rem 0 .4rem;font-size:1.05rem}
-    .icon{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:#15223c;border:1px solid #203359;margin-bottom:.6rem}
-    /* About split */
-    .split{display:grid;gap:1.2rem}
-    @media (min-width:900px){.split{grid-template-columns:1.2fr 1fr;align-items:center}}
-    .pill{display:inline-flex;align-items:center;gap:.5rem;border:1px dashed #2c3b63;padding:.35rem .6rem;border-radius:999px;color:var(--muted);font-size:.85rem}
-    .list{display:grid;gap:.5rem;margin-top:.8rem}
-    .list li{list-style:none;display:flex;gap:.6rem;align-items:flex-start}
-    .badge{font-size:.75rem;padding:.25rem .5rem;background:#15223c;border:1px solid #223a68;border-radius:999px;color:var(--muted)}
-    /* Projects */
-    .projects{grid-template-columns:repeat(12,1fr)}
-    .project{grid-column:span 12;background:linear-gradient(135deg,#0e1c36,#12264a);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-    @media (min-width:700px){.project{grid-column:span 6}}
-    .project .thumb{aspect-ratio:16/9;background:repeating-linear-gradient(45deg,#1a2a4a 0 10px,#172540 10px 20px)}
-    .project .info{padding:1rem}
-    /* Contact */
-    form{display:grid;gap:.8rem}
-    input, textarea{width:100%;padding:.8rem;border-radius:12px;border:1px solid var(--border);background:#0c162b;color:var(--text)}
-    textarea{min-height:120px}
-    .note{font-size:.9rem;color:var(--muted)}
-    /* Footer */
-    footer{padding:2rem 0;color:var(--muted)}
-    .foot{display:flex;gap:1rem;flex-wrap:wrap;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:1rem}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff;background:#0b1320;}
+    header{position:relative;text-align:center;color:white;}
+    header img.bg{width:100%;height:80vh;object-fit:cover;display:block;}
+    header .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem;}
+    h1{font-size:2.4rem;margin:.4rem 0;}
+    .demo-badge{position:absolute;top:1rem;right:1rem;background:#ffcc00;color:#000;padding:.5rem 1rem;border-radius:999px;font-weight:bold;}
+    section{padding:3rem 1rem;max-width:1000px;margin:auto;}
+    h2{font-size:1.8rem;margin-bottom:.5rem;color:#ffd25a;}
+    .about p{line-height:1.6;}
+    .services{display:grid;gap:1rem;margin-top:1rem;}
+    @media(min-width:700px){.services{grid-template-columns:repeat(2,1fr);}}
+    .card{background:#101a2e;padding:1.2rem;border-radius:12px;border:1px solid #1e2a44;}
+    .contact{background:#0f1b31;border-radius:12px;padding:1.2rem;margin-top:1rem;}
+    input,textarea{width:100%;padding:.7rem;border:none;border-radius:8px;margin-top:.5rem;background:#0b1320;color:#fff;}
+    button{margin-top:1rem;padding:.7rem 1.2rem;background:#ffd25a;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;}
+    footer{text-align:center;padding:1rem;color:#aaa;border-top:1px solid #1e2a44;margin-top:2rem;}
+    a{color:#ffd25a;text-decoration:none;}
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <nav class="container nav">
-      <a class="brand" href="#home" aria-label="SunSpark Solar home">
-        <span class="logo" aria-hidden="true"></span>
-        <span>SunSpark Solar</span>
-      </a>
-      <div class="menu">
-        <a href="#services">Services</a>
-        <a href="#about">Why Solar</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="#contact">Get a Quote</a>
-      </div>
-    </nav>
+    <img src="67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg" alt="Nexolar Innovation Solar" class="bg">
+    <div class="overlay">
+      <h1>Nexolar Innovation</h1>
+      <p>Complete Solar Solutions — from transport to installation</p>
+    </div>
+    <div class="demo-badge">Demo Website — Full Site Coming Soon!</div>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="container">
-      <span class="pill">☀️ Clean energy, clear savings</span>
-      <h1>Go Solar with Confidence</h1>
-      <p>We design and install high‑efficiency solar systems for homes and businesses. From site survey to commissioning and maintenance—everything handled by experts.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Free Site Assessment</a>
-        <a class="btn" href="#services">Explore Services →</a>
-      </div>
+  <section class="about">
+    <h2>About Us</h2>
+    <p>Nexolar Innovation, founded by Amal Raj (<a href="https://www.instagram.com/am4l.x" target="_blank">@am4l.x</a>), delivers turnkey solar projects for homes and companies. We handle everything — site survey, design, transport, installation, and maintenance — ensuring a hassle‑free experience.</p>
+  </section>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card"><strong>Solar Panel Installation</strong><p>High efficiency systems designed for your property.</p></div>
+      <div class="card"><strong>Backup Battery Installation</strong><p>Reliable storage to keep your power on 24/7.</p></div>
+      <div class="card"><strong>Maintenance and Repair</strong><p>Quick service to keep your system performing at its best.</p></div>
+      <div class="card"><strong>New Inverter Replacement</strong><p>Upgrade to smart, efficient inverters for higher savings.</p></div>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services">
-    <div class="container">
-      <h2>Our Services</h2>
-      <p class="muted">Turnkey solar solutions tailored to your roof, budget, and goals.</p>
-      <div class="grid" style="margin-top:1rem">
-        <div class="card">
-          <div class="icon">🔆</div>
-          <h3>Residential Solar</h3>
-          <p class="muted">Rooftop grid‑tied and hybrid systems with smart monitoring and subsidy guidance.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🏢</div>
-          <h3>Commercial & Industrial</h3>
-          <p class="muted">High‑yield systems that reduce operating costs and stabilize long‑term energy spend.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🔋</div>
-          <h3>Battery & Maintenance</h3>
-          <p class="muted">Li‑ion storage, AMC, performance audits, and rapid fault resolution.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About / Why Solar -->
-  <section id="about">
-    <div class="container split">
-      <div>
-        <span class="pill">Why choose solar?</span>
-        <h2>Save Money. Cut Carbon. Gain Independence.</h2>
-        <p class="muted">Solar delivers predictable bills and protects you from rising tariffs. Our engineers design for maximum generation and durability.</p>
-        <ul class="list">
-          <li>✅ <strong>Up to 80% bill savings</strong> with net‑metering*</li>
-          <li>✅ <strong>Tier‑1 panels & inverters</strong> from trusted brands</li>
-          <li>✅ <strong>25‑year panel warranty</strong> & 5+ year workmanship</li>
-        </ul>
-        <p class="note">*Savings depend on site conditions, DISCOM policy, and usage.</p>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Simple 4‑Step Process</h3>
-        <ol class="list" style="padding-left:1rem">
-          <li>Site survey & load study</li>
-          <li>Custom design & proposal</li>
-          <li>Installation & net‑metering</li>
-          <li>Monitoring & support</li>
-        </ol>
-        <div style="margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap">
-          <span class="badge">MNRE compliant</span>
-          <span class="badge">Subsidy guidance</span>
-          <span class="badge">Rapid SLA</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <div class="container">
-      <h2>Recent Projects</h2>
-      <p class="muted">A quick look at some of our installs.</p>
-      <div class="grid projects" style="margin-top:1rem">
-        <div class="project">
-          <div class="thumb" role="img" aria-label="6kW residential rooftop solar pattern placeholder"></div>
-          <div class="info">
-            <strong>6 kW Residential Rooftop</strong>
-            <p class="muted">South‑facing array with hybrid inverter and 5 kWh storage.</p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="thumb" role="img" aria-label="50kW factory shed solar pattern placeholder"></div>
-          <div class="info">
-            <strong>50 kW Factory Shed</strong>
-            <p class="muted">High‑efficiency modules, string inverters, and remote monitoring.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2>Get a Free Quote</h2>
-      <p class="muted">Tell us a bit about your property and energy needs. We’ll get back within one business day.</p>
-      <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll contact you soon.');">
-        <div class="grid" style="grid-template-columns:1fr;gap:.8rem">
-          <input type="text" name="name" placeholder="Full name" required>
-          <input type="email" name="email" placeholder="Email" required>
-          <input type="tel" name="phone" placeholder="Phone">
-          <textarea name="message" placeholder="Tell us your monthly bill, roof type, and location"></textarea>
-        </div>
-        <div class="actions" style="margin-top:.6rem">
-          <button class="btn primary" type="submit">Request Callback</button>
-          <a class="btn" href="tel:+910000000000" aria-label="Call us">Call us</a>
-        </div>
-      </form>
-    </div>
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: +91 9188033745, +91 8848211452<br>Email: amalrajks12@gmail.com<br>Address: Thiruvalloor, Alangad, Aluva - 683511</p>
+    <form onsubmit="event.preventDefault();alert('Thanks! This is a demo — full site coming soon.');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    <div class="container foot">
-      <div class="brand">
-        <span class="logo" aria-hidden="true"></span>
-        <span>SunSpark Solar</span>
-      </div>
-      <div>© <span id="year"></span> SunSpark Solar. All rights reserved.</div>
-    </div>
+    © <script>document.write(new Date().getFullYear())</script> Nexolar Innovation. Founder: Amal Raj — <a href="https://www.instagram.com/am4l.x" target="_blank">Instagram</a>.
   </footer>
-
-  <script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
