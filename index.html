@@ -4,86 +4,141 @@
   <meta charset="UTF-8">
   <title>Nexolar Innovation — Clean Solar, Bold Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Base reset & typography */
-    body { margin:0; font-family: Arial, sans-serif; color: #333; }
-    a { text-decoration: none; color: inherit; }
-    h2 { color: #f5d76e; }
-
-    /* Demo notification */
-    .demo-banner {
-      position: fixed; top:10px; right: -30px;
-      background: #ff4444; color: #fff; padding: 5px 60px;
-      font-size: 0.9rem; transform: rotate(45deg);
-      z-index: 1000;
+    body { 
+      margin: 0; 
+      font-family: 'Poppins', sans-serif; 
+      color: #333; 
+      background-color: #fff;
+    }
+    a { 
+      text-decoration: none; 
+      color: inherit; 
+    }
+    h1, h2 {
+      font-weight: 700;
+    }
+    h2 { 
+      color: #f5d76e; 
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
-    /* Hero section with tiles */
+    /* --- Navigation Bar --- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      z-index: 100;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+      color: #333;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f5d76e;
+    }
+
+    /* --- Hero Section --- */
     .hero {
-      height: 75vh;
-      /* background: url('67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg')*/ center/cover no-repeat;
+      height: 80vh;
+      background: linear-gradient(to bottom, #f5d76e 0%, #fffde4 100%);
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
       position: relative;
-      display: flex; align-items: center; justify-content: center;
     }
     .hero .overlay {
-      position: absolute; top:0; left:0; right:0; bottom:0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
-      color: #fff;
+      color: #222;
       text-align: center;
       padding: 2rem;
     }
     .hero .tiles {
-      display: flex; gap:1rem; margin-top:2rem;
-      flex-wrap: wrap; justify-content: center;
+      display: flex; 
+      gap: 1rem; 
+      margin-top: 2rem;
+      flex-wrap: wrap; 
+      justify-content: center;
     }
     .hero .tile {
-      background: rgba(255,255,255,0.2);
-      padding:1rem 1.5rem;
-      border-radius:8px;
-      cursor:pointer;
+      background: #fffde4;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
       transition: 0.3s;
+      border: 1px solid #f5d76e;
+      font-weight: bold;
     }
     .hero .tile:hover {
       background-color: #f5d76e;
       color: black;
+      transform: translateY(-3px);
     }
 
-    /* Sections */
-    section { padding:4rem 1rem; max-width: 1000px; margin: auto; }
-    .cards {
-      display: grid; gap:1rem;
+    /* --- General Section & Cards --- */
+    section { 
+      padding: 4rem 1rem; 
+      max-width: 1000px; 
+      margin: auto; 
     }
-    @media(min-width:700px) {
-      .cards { grid-template-columns: repeat(2, 1fr); }
+    .cards {
+      display: grid; 
+      gap: 1.5rem;
+    }
+    @media(min-width: 700px) {
+      .cards { 
+        grid-template-columns: repeat(2, 1fr); 
+      }
     }
     .card {
-      background: #f3f3f3;
-      border-radius:8px;
-      padding:2rem;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 2rem;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* --- Contact Section --- */
+    .contact {
+      text-align: center;
+    }
+    .contact p {
+      line-height: 1.8;
     }
     .contact a.insta {
       background: #f5d76e;
       color: black;
-      padding: 0.75rem 1.2rem;
-      border-radius: 20px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
       font-weight: bold;
       display: inline-block;
-      margin-top: 0.5rem;
-      transition: background 0.3s;
+      margin-top: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
     }
     .contact a.insta:hover {
-      background: #fff176;
+      background: #f7e08b;
+      transform: translateY(-2px);
     }
+
+    /* --- Footer --- */
     footer {
       background: #222;
-      color: #aaa;
+      color: #ccc; /* Updated color for better contrast and cohesion */
       text-align: center;
       padding: 2rem 1rem;
       margin-top: 2rem;
@@ -91,47 +146,56 @@
   </style>
 </head>
 <body>
-  <div class="demo-banner">Demo Site – Real One Coming Soon!</div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <div class="hero">
     <div class="overlay">
       <h1>Nexolar Innovation</h1>
       <p>Complete Solar Solutions – From Contract to Commissioning</p>
       <div class="tiles">
-        <div class="tile">Residential Projects</div>
-        <div class="tile">Commercial Contracts</div>
-        <div class="tile">Turnkey Solutions</div>
+        <a href="#services" class="tile">Residential Projects</a>
+        <a href="#services" class="tile">Commercial Contracts</a>
+        <a href="#services" class="tile">Turnkey Solutions</a>
       </div>
     </div>
   </div>
 
   <section id="about">
     <h2>About Us</h2>
-    <p><strong>Nexolar Innovation</strong>—led by Amal Raj—delivers end-to-end solar solutions: site surveys, design, transport, installation, and maintenance for homes and businesses.</p>
+    <p style="text-align: center; max-width: 800px; margin: auto;"><strong>Nexolar Innovation</strong>—led by Amal Raj—delivers end-to-end solar solutions. We handle everything from initial site surveys and custom system design to transportation, professional installation, and ongoing maintenance for both homes and businesses in Kerala.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="cards">
-      <div class="card">Full Project Management (A–Z)</div>
-      <div class="card">Residential Installations</div>
-      <div class="card">Commercial & Industrial</div>
-      <div class="card">Post-Installation Support</div>
+      <div class="card"><strong>Full Project Management (A–Z)</strong><br>We manage every detail, so you don't have to.</div>
+      <div class="card"><strong>Residential Installations</strong><br>Power your home with clean, reliable solar energy.</div>
+      <div class="card"><strong>Commercial & Industrial</strong><br>Custom solutions to reduce operational costs for businesses.</div>
+      <div class="card"><strong>Post-Installation Support</strong><br>Comprehensive maintenance and support to ensure peak performance.</div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Founding Owner: Amal Raj</p>
+    <h2>Get in Touch</h2>
+    <p>Ready to make the switch to solar? Contact us for a free consultation.</p>
+    <p><strong>Founding Owner:</strong> Amal Raj</p>
+    <p><strong>Email:</strong> <a href="mailto:contact@nexolar.com">contact@nexolar.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+910000000000">+91 000 000 0000</a></p>
     <a class="insta" href="https://www.instagram.com/am4l.x" target="_blank">Follow on Instagram</a>
   </section>
 
   <footer>
-    &copy; <span id="year"></span> Nexolar Innovation – Demo Site Only.
+    &copy; <span id="year"></span> Nexolar Innovation. All Rights Reserved.
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
