@@ -1,67 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nexolar Innovation — Complete Solar Solutions</title>
+  <meta charset="UTF-8">
+  <title>Nexolar Innovation - Demo Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#fff;background:#0b1320;}
-    header{position:relative;text-align:center;color:white;}
-    header img.bg{width:100%;height:80vh;object-fit:cover;display:block;}
-    header .overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem;}
-    h1{font-size:2.4rem;margin:.4rem 0;}
-    .demo-badge{position:absolute;top:1rem;right:1rem;background:#ffcc00;color:#000;padding:.5rem 1rem;border-radius:999px;font-weight:bold;}
-    section{padding:3rem 1rem;max-width:1000px;margin:auto;}
-    h2{font-size:1.8rem;margin-bottom:.5rem;color:#ffd25a;}
-    .about p{line-height:1.6;}
-    .services{display:grid;gap:1rem;margin-top:1rem;}
-    @media(min-width:700px){.services{grid-template-columns:repeat(2,1fr);}}
-    .card{background:#101a2e;padding:1.2rem;border-radius:12px;border:1px solid #1e2a44;}
-    .contact{background:#0f1b31;border-radius:12px;padding:1.2rem;margin-top:1rem;}
-    input,textarea{width:100%;padding:.7rem;border:none;border-radius:8px;margin-top:.5rem;background:#0b1320;color:#fff;}
-    button{margin-top:1rem;padding:.7rem 1.2rem;background:#ffd25a;color:#000;border:none;border-radius:8px;font-weight:bold;cursor:pointer;}
-    footer{text-align:center;padding:1rem;color:#aaa;border-top:1px solid #1e2a44;margin-top:2rem;}
-    a{color:#ffd25a;text-decoration:none;}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 10;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: #f5d76e;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #f5d76e; }
+    .hero {
+      height: 100vh;
+      background: url('67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+    }
+    .typewriter {
+      color: #f5d76e;
+      font-size: 1.5rem;
+      margin-top: 10px;
+      height: 2rem;
+      overflow: hidden;
+      border-right: 2px solid #f5d76e;
+      white-space: nowrap;
+    }
+    section {
+      min-height: 80vh;
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    #about, #services, #contact {
+      background: #222;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      padding: 30px;
+    }
+    .highlight {
+      color: #f5d76e;
+      font-weight: bold;
+    }
+    .insta {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #f5d76e;
+      color: #000;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .insta:hover { background: #fff176; }
+    .demo-banner {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: red;
+      color: #fff;
+      padding: 5px 15px;
+      font-size: 0.9rem;
+      z-index: 20;
+      transform: rotate(10deg);
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
+
+  <div class="demo-banner">Demo Site – Real One Coming Soon!</div>
+
   <header>
-    <img src="67b7e94d-d930-4ba6-b441-83aa676d9f3a.jpg" alt="Nexolar Innovation Solar" class="bg">
-    <div class="overlay">
-      <h1>Nexolar Innovation</h1>
-      <p>Complete Solar Solutions — from transport to installation</p>
-    </div>
-    <div class="demo-badge">Demo Website — Full Site Coming Soon!</div>
+    <h1>Nexolar Innovation</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="about">
+  <div class="hero">
+    <h2>Powering the Future with Solar</h2>
+    <div class="typewriter" id="typewriter"></div>
+  </div>
+
+  <section id="about">
     <h2>About Us</h2>
-    <p>Nexolar Innovation, founded by Amal Raj (<a href="https://www.instagram.com/am4l.x" target="_blank">@am4l.x</a>), delivers turnkey solar projects for homes and companies. We handle everything — site survey, design, transport, installation, and maintenance — ensuring a hassle‑free experience.</p>
+    <p><span class="highlight">Nexolar Innovation</span> is a startup providing complete solar solutions — from contracts, installation, transportation, to maintenance. 
+       We work with both companies and individuals to deliver energy freedom.</p>
   </section>
 
-  <section>
+  <section id="services">
     <h2>Our Services</h2>
-    <div class="services">
-      <div class="card"><strong>Solar Panel Installation</strong><p>High efficiency systems designed for your property.</p></div>
-      <div class="card"><strong>Backup Battery Installation</strong><p>Reliable storage to keep your power on 24/7.</p></div>
-      <div class="card"><strong>Maintenance and Repair</strong><p>Quick service to keep your system performing at its best.</p></div>
-      <div class="card"><strong>New Inverter Replacement</strong><p>Upgrade to smart, efficient inverters for higher savings.</p></div>
-    </div>
+    <ul>
+      <li>End-to-end solar project execution (A to Z)</li>
+      <li>Custom solar panel installation</li>
+      <li>Transportation and logistics for solar components</li>
+      <li>Long-term service and maintenance contracts</li>
+    </ul>
   </section>
 
-  <section class="contact">
+  <section id="contact">
     <h2>Contact Us</h2>
-    <p>Phone: +91 9188033745, +91 8848211452<br>Email: amalrajks12@gmail.com<br>Address: Thiruvalloor, Alangad, Aluva - 683511</p>
-    <form onsubmit="event.preventDefault();alert('Thanks! This is a demo — full site coming soon.');">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <p>Owner: Amal Raj</p>
+    <a class="insta" href="https://www.instagram.com/am4l.x?igsh=MTU3bndrNDQ2NWo2dw==" target="_blank">
+      Follow on Instagram
+    </a>
   </section>
 
-  <footer>
-    © <script>document.write(new Date().getFullYear())</script> Nexolar Innovation. Founder: Amal Raj — <a href="https://www.instagram.com/am4l.x" target="_blank">Instagram</a>.
-  </footer>
+  <script>
+    // Typewriter effect
+    const text = "Your trusted partner for complete solar solutions";
+    let i = 0;
+    const speed = 100;
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+
+    // Scroll fade-in
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+      const trigger = window.innerHeight / 1.2;
+      sections.forEach(sec => {
+        const boxTop = sec.getBoundingClientRect().top;
+        if (boxTop < trigger) {
+          sec.classList.add("visible");
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
